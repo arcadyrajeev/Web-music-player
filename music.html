@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Music Player</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="heading">
+			<img src="assets/player.png" height="80px">
+			<div style="margin-top:30px; display: inline-block;"><text style="font-size: 40px; font-weight:bolder;"> Music</text> <text style="font-size: 35px; font-weight: lighter;"> Player</text></div>
+		</div>
+		<div class="card-container">
+			<div class="invis1"></div>
+
+
+			<div class="card"  data-song="music/The_Weeknd-Blinding_Lights.mp3" data-title="Blinding Lights" data-artist="Weekend">
+				<div class="data">
+					
+					<text class="song">Blinding Lights</text>
+					<text class="artist">Weekend</text>
+				</div>
+				<div class="cover"><img src="Album Covers/blinding-lights.jpg" height="260px" ></div>
+			</div>
+
+
+			<div class="card" data-song="music/Ed_Sheeran-Perfect.mp3" data-title="Perfect" data-artist="Ed Sheeran">
+				<div class="data">
+					<text class="song">Perfect</text>
+					<text class="artist">Ed Sheeran</text>
+				</div>
+				<div class="cover"><img src="Album Covers/perfect.jpg" height="260px"></div>
+			</div>
+
+
+			<div class="card" data-song="music/Justin_Bieber-Sorry.mp3" data-title="Sorry" data-artist="Justin Bieber">
+				<div class="data">
+					<text class="song">Sorry</text>
+					<text class="artist">Justin Bieber</text>
+				</div>
+				<div class="cover"><img src="Album Covers/sorry.jpg" height="260px"></div>
+			</div>
+
+
+			<div class="card" data-song="music/Con_Calma_-_Daddy_Yankee_Snow.mp3" data-title="Con Calma" data-artist="Daddy Yankee">
+				<div class="data">
+					<text class="song">Con Calma</text>
+					<text class="artist">Daddy Yankee</text>
+				</div>
+				<div class="cover"><img src="Album Covers/con-calma.jpg" height="260px"></div>
+			</div>
+
+
+			<div class="card" data-song="music/Maroon_5-Memories.mp3" data-title="Memories" data-artist="Maroon 5">
+				<div class="data">
+					<text class="song">Memories</text>
+					<text class="artist">Maroon 5</text>
+				</div>
+				<div class="cover"><img src="Album Covers/memories.jpg" height="260px"></div>
+			</div>
+
+
+			<div class="card" data-song="music/Hozier_-_Take_Me_To_Church.mp3" data-title="Take me to Church" data-artist="Hozier">
+				<div class="data">
+					<text class="song">Take me to church</text>
+					<text class="artist">HOZIER</text>
+				</div>
+				<div class="cover"><img src="Album Covers/church2.jpg" height="260px"></div>
+			</div>
+
+
+			<div class="card" data-song="music/Maroon_5_Ft_Wiz_Khalifa_-_Payphone.mp3" data-title="Take me to Church" data-artist="Hozier">
+				<div class="data">
+					<text class="song">Payphone</text>
+					<text class="artist">Maroon 5</text>
+				</div>
+				<div class="cover"><img src="Album Covers/payphone.jpg" height="260px"></div>
+			</div>
+
+			<div class="card" data-song="music/somewhere_only_we_know.mp3" data-title="Somewhere Only We Know" data-artist="Rihanna">
+				<div class="data">
+					<text class="song" style="font-size: 18px;">Somewhere Only We Know</text>
+					<text class="artist">Rihanna</text>
+				</div>
+				<div class="cover"><img src="Album Covers/rihanna.jpg" height="260px"></div>
+			</div>
+
+			<div class="invis2"></div>
+		</div>
+
+		<!--audio tag needed the source tag for loading the src-->
+		<audio controls id="audioPlayer">
+			<source src="" type="audio/mpeg">
+		</audio>
+
+		<div class="time-container">
+			<span id="current-time">0:00</span> / <span id="duration">0:00</span>
+		</div>
+
+		<div class="seeker">
+			<input id="progress" type="range" value="0" >
+		</div>
+
+		<div class="ctrl-container">
+			<div>
+				<svg id="sound" viewBox="0 0 1325.72 1032.65"><title>volume</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M537.66,101.89,54.35,452.3C-3,493.91-1.26,594.23,57.55,632.88L552.84,958.47c5.3,2.82,45.12,23,87.13-2.21,45.06-27.08,53.76-83.09,54.59-89a1630.64,1630.64,0,0,0,30.82-324.64,1625.64,1625.64,0,0,0-40.77-354c-1-5.76-12.06-63.86-59.82-89C582.08,77.21,543.28,98.64,537.66,101.89Z"/><rect class="cls-1" y="287.89" width="378.11" height="477.21" rx="67.22"/><path class="cls-1" d="M814.45,811.15c-7.86,0-15.62-4.33-20.61-12.51C785.53,785,788,765.94,799.39,756c6.43-5.61,29.09-26.7,51-62.44A305.21,305.21,0,0,0,895.9,538.17c1.28-62.79-15.61-121.58-50.18-174.73-27.48-42.26-55.9-64.66-57.1-65.6-11.8-9.2-15.13-28.1-7.44-42.22s23.49-18.1,35.29-8.89c3.73,2.91,37.39,29.85,69.5,79.23a376.4,376.4,0,0,1,60.92,213.69c-3.21,158-98.38,249-117.42,265.63A22.68,22.68,0,0,1,814.45,811.15Z"/><path class="cls-1" d="M955.87,908.27c-7.87,0-15.62-4.34-20.62-12.52-8.3-13.61-5.81-32.7,5.56-42.64,22.58-19.72,135.41-127.58,139.2-314.32,1.84-90.73-22.5-175.59-72.35-252.24-39.48-60.71-80.63-93.14-82.36-94.49-11.8-9.21-15.13-28.11-7.44-42.22s23.49-18.11,35.29-8.9c5.07,3.95,50.84,40.62,94.76,108.14a515.09,515.09,0,0,1,7.58,550.14c-35.86,58.48-73.82,93.76-84.6,103.17A22.7,22.7,0,0,1,955.87,908.27Z"/><path class="cls-1" d="M1095.66,1032.65c-7.87,0-15.62-4.33-20.62-12.52-8.3-13.61-5.81-32.69,5.56-42.63,31.47-27.49,188.7-177.8,194-438.13,2.58-126.59-31.34-244.92-100.8-351.71C1118.89,103.26,1061.42,58,1059,56.07c-11.8-9.2-15.13-28.1-7.44-42.22s23.49-18.1,35.29-8.9c6.8,5.31,68.12,54.43,127.18,145.23a690.79,690.79,0,0,1,10.2,738.08c-48.2,78.6-99.1,125.9-113.55,138.52A22.68,22.68,0,0,1,1095.66,1032.65Z"/></g></g></svg>
+				<div class="volume-container">
+					<input id="volume" type="range" min="0" max="1" step="0.01" value="1">
+				</div>
+			</div>
+			<img src="assets/prev@4x.png" class="prev">
+			<div class="play-btn">
+				<img src="assets/play.png" class="play">
+				<img src="assets/circle.png" class="circle" onclick="playPause()">
+			</div>
+			<img src="assets/next@4x.png" class="next">
+			<div>
+				<svg id="loop" viewBox="0 0 989.13 926.96"><title>loop</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M989.13,272.59a49.09,49.09,0,0,1-24.8,43L912.5,345.46A464.17,464.17,0,1,1,439.9,0c28.55,4.17,48.28,29.76,45.6,55.93-2.32,22.73-21.12,41.95-45.6,45.25-191,15.17-338.9,175.16-338.9,362C101,663.22,263.74,826,463.78,826S826.56,663.22,826.56,463.18a363.78,363.78,0,0,0-5.79-64.76L796.21,412.6a49.59,49.59,0,0,1-74.38-42.94V175.53a49.59,49.59,0,0,1,74.38-42.95l168.12,97.07A49.06,49.06,0,0,1,989.13,272.59Z"/></g></g></svg>
+
+			</div>
+		</div>
+
+		<!-- New controls -->
+
+		<!--div class="speed-container">
+			<label for="speed">Speed:</label>
+			<select id="speed">
+				<option value="0.5">0.5x</option>
+				<option value="1" selected>1x</option>
+				<option value="1.5">1.5x</option>
+				<option value="2">2x</option>
+			</select>
+		</div-->
+
+
+
+	</body>
+	<script src="app.js"></script>
+</html>
